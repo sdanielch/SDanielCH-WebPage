@@ -28,85 +28,39 @@ body {
     background-size: cover;
   }
 }
-#g_tasks {
+
+a {
+text-decoration: none;}
+#principal {
 position: fixed;
-text-align: center;
-top: 0; left: 0; bottom: 0;
-width: 72px;
-background: rgba(20,20,20,0.7);
-}
-#test_space {
-	position: fixed;
-	top:0; left: 72px; right: 0; bottom: 0;
-	background: transparent;
-}
-
-.g_icons_class {
-	position: relative;
-	display: inline-block;
-	width: 128px;
-	height: 128px;
-	background: #888;
-	border-radius: 4px;
-	margin: 15px;
-	float: right;
-}
-.g_tasks_class {
-	width: 68px;
-	height: 68px;
-	margin: 2px;
-	background: #F00;
-	border-radius: 4px;
-
-}
-.g_windows_class {
-	width: 640px;
-	height: 480px;	
-	min-width: 300px;
-	min-height: 200px;
-	background: #181818;
-	position: absolute !important;
-	display: inline-block;
-	border: 1px #080808 solid;
-	box-shadow: 1px 1px 8px #000;
-	z-index: 1000;
-  box-sizing: border-box;
-  transform:scale(1.0,1.0);
-  -webkit-animation: apertura 300ms; /* Chrome, Safari, Opera */
-  animation: apertura 300ms;
-}
-@-webkit-keyframes apertura {
-  from {transform:scale(0.5,0.5); opacity: 0.2;}
-  to {transform:scale(1.0,1.0); opacity: 1.0;}
-} @keyframes apertura {
-  from {transform:scale(0.5,0.5); opacity: 0.2;}
-  to {transform:scale(1.0,1.0); opacity: 1.0;}
+display: inline-block;
+margin: auto;
+left: 0; right: 0; 
+top: 0; bottom: 0;
+width: 80%;
+height: 70%;
+min-width: 800px;
+min-height: 600px;
+box-sizing: border-box;
+background: #abbbcc;
+border-radius: 10px;
+padding: 5px;
+border: 2px #888 ridge;
+transform:scale(1.0,1.0);
+-webkit-animation: myfirst 800ms;
+animation: myfirst 800ms;
+box-shadow: 1px 1px 20px #000;
 }
 
-.cerrando {
- box-sizing: border-box;
-transform:scale(0.5,0.5);
--webkit-animation: cerrando 300ms; /* Chrome, Safari, Opera */
-animation: cerrando 300ms;
-} @-webkit-keyframes cerrando {
-  from {transform:scale(1.0,1.0); opacity: 1.0;}
-  to {transform:scale(0.5,0.5); opacity: 0.2;}
-} @keyframes cerrando {
- from {transform:scale(1.0,1.0); opacity: 1.0;}
-  to {transform:scale(0.5,0.5); opacity: 0.2;}
+@-webkit-keyframes myfirst {
+  0% {left: -200% ;transform:scale(0.2,0.2); opacity: 0.2;}
+  50% {transform:scale(0.5,0.5); opacity: 0.5;}
+  100% {transform:scale(1.0,1.0); opacity: 1.0;}
 }
 
-.g_windows_panel {
-	position: relative;
-	top: 0; left: 0px; right: 0; height: 50px;
-	background: #33CC33;
-}
-.g_windows_panel_button {
-	position: relative;
-	display: inline-block;
-	margin: 5px;
-	width: 72px;
-	height: 30px;
-	border: 1px #484848 groove;
-	text-align: center;
+
+@keyframes myfirst {
+  0% {left: -200% ;transform:scale(0.2,0.2); opacity: 0.2;}
+  50% {transform:scale(0.5,0.5); opacity: 0.5;}
+  100% {transform:scale(1.0,1.0); opacity: 1.0;}
 }
