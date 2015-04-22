@@ -44,8 +44,8 @@ display: inline-block;
 margin: auto;
 left: 0; right: 0; 
 top: 0; bottom: 0;
-width: 80%;
-height: 70%;
+width: 85%;
+height: 75%;
 min-width: 800px;
 min-height: 600px;
 box-sizing: border-box;
@@ -75,9 +75,37 @@ opacity: 0;
 }
 
 #menu {
-	position: absolute;
-	top: 0;	right: 0; bottom: 0;
-	width: 200px;
+	position: relative;
+	top: 0;	left: 0; right: 0; height: 40px; 
 	background: #181818;
 	color: #CDCDCD;
+	margin: -5px;
+	box-sizing: border-box;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+#menu span {
+  font-family: 'Raleway', Arial;
+  font-size: 20px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+#socials {
+position: absolute;
+top: 0px;
+right: 10px;
+font-size: 36px;
+}
+#socials a {
+color: #686868;
+margin: -3px;
+}
+#socials a:hover {
+color: #EFEFEF;
+}
+
+#menu2 {
+	position: absolute; top: 50px; right: 10px; bottom: 10px; width: 180px;
+	background: #EFEFEF; border: 1px #CDCDCD solid;
 }
