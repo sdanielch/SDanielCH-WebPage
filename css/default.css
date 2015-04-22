@@ -15,7 +15,15 @@ html, body {
 *:active { outline: none; border: none; }
 *:focus { outline:0 !important; }
 body {
-	background: #282828;
+background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
 	color: #383838;
 }
 
@@ -29,8 +37,7 @@ body {
   }
 }
 
-a {
-text-decoration: none;}
+a { text-decoration: none;}
 #principal {
 position: fixed;
 display: inline-block;
@@ -42,25 +49,34 @@ height: 70%;
 min-width: 800px;
 min-height: 600px;
 box-sizing: border-box;
-background: #abbbcc;
-border-radius: 10px;
+background: #FFF;
+border-radius: 0px;
 padding: 5px;
-border: 2px #888 ridge;
+border: 2px #424242 solid;
 transform:scale(1.0,1.0);
 -webkit-animation: myfirst 800ms;
 animation: myfirst 800ms;
 box-shadow: 1px 1px 20px #000;
+    animation-delay: 300ms;
+   -webkit-animation-delay: 300ms;
+   animation-fill-mode: forwards;
+   -webkit-animation-fill-mode: forwards;
+opacity: 0;
 }
 
 @-webkit-keyframes myfirst {
-  0% {left: -200% ;transform:scale(0.2,0.2); opacity: 0.2;}
-  50% {transform:scale(0.5,0.5); opacity: 0.5;}
-  100% {transform:scale(1.0,1.0); opacity: 1.0;}
+  0% {left: -200% ;transform:scale(0.2,0.2); opacity: 0.2; }
+  50% {transform:scale(0.5,0.5); opacity: 0.5; }
+  100% {transform:scale(1.0,1.0); opacity: 1.0; background: #E8EAF6;}
+  } @keyframes myfirst {
+  0% {left: -200% ;transform:scale(0.2,0.2); opacity: 0.2; }
+  50% {transform:scale(0.5,0.5); opacity: 0.5; }
+  100% {transform:scale(1.0,1.0); opacity: 1.0; background: #E8EAF6;}
 }
 
-
-@keyframes myfirst {
-  0% {left: -200% ;transform:scale(0.2,0.2); opacity: 0.2;}
-  50% {transform:scale(0.5,0.5); opacity: 0.5;}
-  100% {transform:scale(1.0,1.0); opacity: 1.0;}
+#menu {
+	position: absolute;
+	top: 0;	right: 0; bottom: 0;
+	width: 200px;
+	background: #181818;
 }
