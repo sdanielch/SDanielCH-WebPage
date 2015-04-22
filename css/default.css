@@ -94,11 +94,16 @@ right: 10px;
 font-size: 36px;
 }
 #socials a {
-color: #686868;
+color: #EFEFEF;
 margin: -3px;
+-moz-transition: all 150ms ease;
+-ms-transition: all 150ms ease;
+-o-transition: all 150ms ease;
+transition: all 150ms ease;
+
 }
 #socials a:hover {
-color: #EFEFEF;
+color: #FF8844;
 }
 
 #menu2 {
