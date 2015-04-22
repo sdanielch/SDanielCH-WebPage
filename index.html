@@ -2,14 +2,38 @@
 <head>
 <meta charset="UTF-8">
 <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAEMAAAB0AAAAbQAAABUAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwQAAAP4AAAD9AAAA/gAAAP4AAAD9AAAA/wAAACUAAAAAAAAAMAAAAEMAAAAAAAAAAAAAAAAAAAAAAAAApwAAAP4AAAD/AAAA0gAAAHMAAACHAAAA/wAAAP4AAAD7AAAAAAAAAAEAAAD3AAAAAAAAAAAAAAAAAAAAAAAAAP4AAAD+AAAAAAAAAAEAAAAAAAAAAAAAAAEAAAC3AAAA/gAAAKUAAAAAAAAAvAAAAAAAAAAAAAAAAAAAAAAAAAD+AAAA/gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAJQAAAP0AAADjAAAAAQAAAP4AAAAAAAAAAAAAAAAAAAAAAAAAowAAAP0AAACSAAAAAAAAAAUAAAAAAAAABAAAAPEAAAD+AAAArgAAAP8AAAC9AAAAAQAAAAAAAAAAAAAAAAAAAAAAAACbAAAA/wAAAPkAAAD/AAAANgAAAP8AAAD/AAAA/AAAAFwAAACcAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAIgAAAPoAAAD+AAAA/gAAAPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD+AAAA/gAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAACwAAAD9AAAA/wAAAPsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfAAAA+wAAAP8AAAD+AAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8gAAANIAAAD+AAAA/QAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPsAAACmAAAAAAAAAKEAAAAAAAAA0QAAALcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAADSAAAA/gAAAP8AAAD/AAAA/QAAAP4AAAB9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMgAAAD+AAAA/AAAAP0AAADmAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAOA/AADCGwAAz4sAAM/LAADHgwAA4RcAAP4fAAD8PwAA/H8AAPx/AAD4fwAA+U8AAPgfAAD8HwAA//8AAA==" rel="icon" type="image/x-icon" />
-<title>SDanielCH WebPage</title>
+<title>SDanielCH</title>
 <link rel="stylesheet" type="text/css" href="css/default.css" media="screen" />
 <script src='js/libs/jquery-2.1.3.min.js'></script>
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,100' rel='stylesheet' type='text/css' />
 <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 </head>
 <body>
+<script>
+$(document).ready(function(){
 
+
+
+
+$('a[href*=#]:not([href=#])').click(function() {
+    $("a").removeClass('active');
+    $(this).addClass('active');
+  });
+
+
+
+$("#tesla").on('scroll', function() {
+    $('.target').each(function() {
+        if($("#tesla").scrollTop() >= $(this).position().top) {
+            var id = $(this).attr('id');
+            $('#menu2 li a').removeClass('active');
+            $('#menu2 li a[class='+ id +']').addClass('active');
+        }
+    });
+});
+
+});
+</script>
 <div id='principal'>
 <div id="menu"><span>Sergio Daniel Calvo Hidalgo</span>
 <div id="socials">
@@ -26,16 +50,51 @@
 <div id="menu2">
 	<center>
 	<ul>
-  <li><a href="#home">Sobre mi persona</a></li>
-  <li><a href="#news">Sobre mis estudios</a></li>
-  <li><a href="#contact">Sobre mis proyectos</a></li>
-  <li><a href="#about">Trabajos</a></li>
+  <li><a href="#ab1" class="1">Sobre mi persona</a></li>
+  <li><a href="#ab2" class="2">Sobre mis estudios</a></li>
+  <li><a href="#ab3" class="3">Sobre mis proyectos</a></li>
+  <li><a href="#ab4" class="4">Trabajos</a></li>
 </ul>
 	</center>
 </div>
 <div id="tesla">
-<h1>Sobre mi persona</h1><br />
-Bienvenido, esta es mi página web. Nacido en 1991 (Cartagena - Murcia), Empecé desde bien pequeño en el mundillo de la informática. Al principio, como en todo, no hacía más que estropear el ordenador, esto me daba problemas en casa, así que pronto tuve que aprender a solucionar lo que hacía. <br /><br />Antes de la informática, la electrónica me encantaba, tanto que desatornillaba todas las cosas a mi alcance por el mero hecho de saber su funcionamiento, otras veces cogía juguetes que no usaba, los desmontaba y jugaba a inventar nuevas cosas con los elementos que encontraba, y cuando de verdad descubrí el potencial del ordenador fue cuando eso quedó en un segundo plano, con 14 años comencé a entender por encima que es la programación, por qué existe, mi hermano mayor me inició en programación web y desde ese punto de partida comencé a leer por mi mismo tutoriales, conforme avanzaba iba creando proyectos para ir probando nuevos conceptos. <br /><br />
+
+<div id="1" class="target">
+<a name="ab1"></a><h1>Sobre mi persona</h1><br />
+<img src="img/photo.jpg" style="float: left; width: 180px; margin: 10px; background: #000; padding: 5px; border-radius: 180px;" />
+Bienvenido, esta es mi página web. Nacido en 1991 (Cartagena - Murcia), Empecé desde bien pequeño en el mundillo de la informática. Al principio, como en todo, no hacía más que estropear el ordenador, esto me daba problemas en casa, así que pronto tuve que aprender a solucionar lo que hacía. <br /><br />
+
+Antes de la informática, la electrónica me encantaba, tanto que desatornillaba todas las cosas a mi alcance por el mero hecho de saber su funcionamiento, otras veces cogía juguetes que no usaba, los desmontaba y jugaba a inventar nuevas cosas con los elementos que encontraba, y cuando de verdad descubrí el potencial del ordenador fue cuando eso quedó en un segundo plano, con 14 años comencé a entender por encima que es la programación, por qué existe, mi hermano mayor me inició en programación web y desde ese punto de partida comencé a leer por mi mismo tutoriales, conforme avanzaba iba creando proyectos para ir probando nuevos conceptos.  <br /><br />
+
+Poco a poco fuí avanzando, aprendiendo nuevos lenguajes, comencé por HTML, luego aprendí CSS, al tiempo JavaScript, así hasta día de hoy HTML5, CSS3, JavaScript, JQuery, PHP y manejo de bases de datos SQL, además de lenguajes orientados a proyectos web también me interesé por lenguages para aplicaciones de escritorio, como Java, Python, Bash, Visual Basic, C++, pero sin duda lo que más me atrae son los proyectos web.
+</div>
+
+
+
+<div id="2" class="target">
+<a name="ab2"></a><h1>Sobre mis estudios</h1><br />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis placerat mi ut imperdiet. Praesent euismod libero sit amet augue pretium, at luctus diam venenatis. Vestibulum et lectus nulla. Morbi pharetra faucibus tortor, vel venenatis nisl accumsan eget. Vestibulum rhoncus ipsum quis augue suscipit feugiat. Sed ante lectus, aliquet id eros at, bibendum ornare nisi. Praesent elementum pulvinar ipsum, et pretium enim porttitor vitae. Quisque quis dolor tristique, porta arcu ut, placerat est. Etiam auctor, orci nec cursus bibendum, sapien nibh porta nisi, sed elementum odio nulla quis risus. Maecenas vitae sollicitudin massa. Nam a iaculis mauris. Etiam lobortis sit amet orci vitae ornare. Fusce scelerisque ligula quis lorem tristique dapibus. Suspendisse sit amet justo vitae nunc ultrices sodales eu at lectus. Suspendisse leo nisl, tristique porttitor mauris vitae, gravida commodo velit. Nam imperdiet erat quis diam mollis laoreet.
+
+Praesent elementum urna id nulla aliquam, sit amet cursus eros tempus. Donec iaculis diam ipsum, eget mollis risus rutrum at. Etiam elementum, felis ut maximus sodales, ante tellus dignissim sapien, eu pulvinar augue lacus sit amet est. Praesent at consequat elit. Nam eu nunc vitae nunc iaculis elementum. Praesent imperdiet interdum justo sed porta. Vestibulum eget nisl accumsan, porta nisl non, sodales erat. Nunc lobortis tortor et tellus commodo, et varius odio molestie. Nam nec rutrum quam. Aenean consequat nibh eros, vel sagittis arcu varius ut.
+
+</div>
+
+
+
+<div id="3" class="target">
+<a name="ab3"></a><h1>Sobre mis proyectos</h1><br />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis placerat mi ut imperdiet. Praesent euismod libero sit amet augue pretium, at luctus diam venenatis. Vestibulum et lectus nulla. Morbi pharetra faucibus tortor, vel venenatis nisl accumsan eget. Vestibulum rhoncus ipsum quis augue suscipit feugiat. Sed ante lectus, aliquet id eros at, bibendum ornare nisi. Praesent elementum pulvinar ipsum, et pretium enim porttitor vitae. Quisque quis dolor tristique, porta arcu ut, placerat est. Etiam auctor, orci nec cursus bibendum, sapien nibh porta nisi, sed elementum odio nulla quis risus. Maecenas vitae sollicitudin massa. Nam a iaculis mauris. Etiam lobortis sit amet orci vitae ornare. Fusce scelerisque ligula quis lorem tristique dapibus. Suspendisse sit amet justo vitae nunc ultrices sodales eu at lectus. Suspendisse leo nisl, tristique porttitor mauris vitae, gravida commodo velit. Nam imperdiet erat quis diam mollis laoreet.
+
+</div>
+
+
+
+<div id="4" class="target">
+<a name="ab4"></a><h1>Trabajos</h1><br />
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis placerat mi ut imperdiet. Praesent euismod libero sit amet augue pretium, at luctus diam venenatis. Vestibulum et lectus nulla. Morbi pharetra faucibus tortor, vel venenatis nisl accumsan eget. Vestibulum rhoncus ipsum quis augue suscipit feugiat. Sed ante lectus, aliquet id eros at, bibendum ornare nisi. Praesent elementum pulvinar ipsum, et pretium enim porttitor vitae. Quisque quis dolor tristique, porta arcu ut, placerat est. Etiam auctor, orci nec cursus bibendum, sapien nibh porta nisi, sed elementum odio nulla quis risus. Maecenas vitae sollicitudin massa. Nam a iaculis mauris. Etiam lobortis sit amet orci vitae ornare. Fusce scelerisque ligula quis lorem tristique dapibus. Suspendisse sit amet justo vitae nunc ultrices sodales eu at lectus. Suspendisse leo nisl, tristique porttitor mauris vitae, gravida commodo velit. Nam imperdiet erat quis diam mollis laoreet.
+quis, tristique viverra lacus. Nam nec quam sit amet velit congue venenatis.
+</div>
+
 </div>
 </div>
 
