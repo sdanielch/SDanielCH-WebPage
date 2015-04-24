@@ -144,7 +144,7 @@ transition: all 150ms ease;
 /* Efecto de nubes, día y sol */
 .sky {
 			height:100%;
-			position: absolute;
+			position: fixed;
 			left: 0; right: 0; bottom: 0; margin: auto;
 			width: 100%;
 			max-width: 1800px;
