@@ -148,7 +148,8 @@ transition: all 150ms ease;
 			left: 0; right: 0; bottom: 0; margin: auto;
 			width: 100%;
 			max-width: 1800px;
-			overflow:hidden;
+			overflow-x:hidden;
+			overflow-y:hidden;
 			-webkit-transform:translate3d(0,0,0);
 			-moz-transform:translate3d(0,0,0);
 			-o-transform:translate3d(0,0,0)
