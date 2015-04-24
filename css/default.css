@@ -5,10 +5,7 @@ html, body {
   font-family: Arial;
   overflow: auto;
 }
-* {
-  margin: 0px;
-  padding: 0px;
-}
+* {  margin: 0px;  padding: 0px; overflow: hidden;}
 *:active { outline: none; border: none; }
 *:focus { outline:0 !important; }
 body {
