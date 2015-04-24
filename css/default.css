@@ -135,7 +135,6 @@ transition: all 150ms ease;
 			position: absolute;
 			left: 0; right: 0; bottom: 0; margin: auto;
 			width: 100%;
-			max-width: 1800px;
 			overflow:hidden !important;
 			-webkit-transform:translate3d(0,0,0);
 			-moz-transform:translate3d(0,0,0);
