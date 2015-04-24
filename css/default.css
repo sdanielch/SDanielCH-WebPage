@@ -12,16 +12,6 @@ body {
 background: #070B26; color: #383838;
 }
 
-/*@supports (background-size: cover) {
-  body {
-    background: #181818 url('../img/background.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-*/
 a { text-decoration: none;}
 #principal {
 position: fixed;
@@ -140,7 +130,7 @@ transition: all 150ms ease;
 
 
 /* Efecto de nubes, día y sol */
-.sky {
+#sky {
 			height:100%;
 			position: absolute;
 			left: 0; right: 0; bottom: 0; margin: auto;
