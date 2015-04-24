@@ -24,7 +24,7 @@ height: 75%;
 min-width: 800px;
 min-height: 600px;
 box-sizing: border-box;
-background: #444;
+background: #FFF;
 border-radius: 0px;
 padding: 5px;
 border: 2px #424242 solid;
@@ -42,11 +42,11 @@ opacity: 0;
 @-webkit-keyframes myfirst {
   0% {left: -200% ;transform:scale(0.2,0.2); opacity: 0.2; }
   50% {transform:scale(0.5,0.5); opacity: 0.5; }
-  100% {transform:scale(1.0,1.0); opacity: 1.0; background: #E8EAF6;}
+  100% {transform:scale(1.0,1.0); opacity: 1.0;}
   } @keyframes myfirst {
   0% {left: -200% ;transform:scale(0.2,0.2); opacity: 0.2; }
   50% {transform:scale(0.5,0.5); opacity: 0.5; }
-  100% {transform:scale(1.0,1.0); opacity: 1.0; background: #E8EAF6;}
+  100% {transform:scale(1.0,1.0); opacity: 1.0;}
 }
 
 #menu {
