@@ -11,19 +11,10 @@ html, body {
 *:active { outline: none; border: none; }
 *:focus { outline:0 !important; }
 body {
-background:
-linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-background-color: #131313;
-background-size: 20px 20px;
-	color: #383838;
+background: #070B26; color: #383838;
 }
 
-@supports (background-size: cover) {
+/*@supports (background-size: cover) {
   body {
     background: #181818 url('../img/background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -32,7 +23,7 @@ background-size: 20px 20px;
     background-size: cover;
   }
 }
-
+*/
 a { text-decoration: none;}
 #principal {
 position: fixed;
@@ -146,3 +137,113 @@ transition: all 150ms ease;
 .target {
 	margin-bottom: 50px;
 }
+
+
+
+
+/* Efecto de nubes, día y sol */
+.sky {
+			height:100%;
+			position: absolute;
+			left: 0; right: 0; bottom: 0; margin: auto;
+			width: 100%;
+			max-width: 1800px;
+			overflow:hidden;
+			-webkit-transform:translate3d(0,0,0);
+			-moz-transform:translate3d(0,0,0);
+			-o-transform:translate3d(0,0,0)
+			background: #070b26;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA3MGIyNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDIyODgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, #070b26 0%, #002288 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#070b26), color-stop(100%,#002288));
+background: -webkit-linear-gradient(top, #070b26 0%,#002288 100%);
+background: -o-linear-gradient(top, #070b26 0%,#002288 100%);
+background: -ms-linear-gradient(top, #070b26 0%,#002288 100%);
+background: linear-gradient(to bottom, #070b26 0%,#002288 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070b26', endColorstr='#002288',GradientType=0 );
+		}
+.moon {
+			background:url("http://montanaflynn.me/lab/css-clouds/images/moon.png");
+			background-position: right center;
+			position:absolute;
+			right: 0; top: 0;
+			height:500px;
+			width:100%;
+			max-width: 1800px;
+		background-repeat: no-repeat;
+		}
+		
+
+		.clouds_one {
+			background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_one.png");
+			position:absolute;
+			background-repeat: repeat-x;
+			left:0;
+			bottom:0;
+			height:500px;
+			width:300%;
+			-webkit-animation:cloud_one 50s linear infinite;
+			-moz-animation:cloud_one 50s linear infinite;
+			-o-animation:cloud_one 50s linear infinite;
+			-webkit-transform:translate3d(0,0,0);
+			-moz-transform:translate3d(0,0,0);
+			-o-transform:translate3d(0,0,0)
+		}
+		
+		.clouds_two {
+			background: url("http://montanaflynn.me/lab/css-clouds/images/cloud_two.png");
+			position:absolute;
+			background-repeat: repeat-x;
+			left:0;
+			bottom:0px;
+			height:500px;
+			width:300%;
+			-webkit-animation:cloud_two 75s linear infinite;
+			-moz-animation:cloud_two 75s linear infinite;
+			-o-animation:cloud_two 75s linear infinite;
+			-webkit-transform:translate3d(0,0,0);
+			-moz-transform:translate3d(0,0,0);
+			-o-transform:translate3d(0,0,0)
+		}
+		
+		.clouds_three {
+			background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_three.png");
+			position:absolute;
+			background-repeat: repeat-x;
+			left:0;
+			bottom:0;
+			height:500px;
+			width:300%;
+			-webkit-animation:cloud_three 100s linear infinite;
+			-moz-animation:cloud_three 100s linear infinite;
+			-o-animation:cloud_three 100s linear infinite;
+			-webkit-transform:translate3d(0,0,0);
+			-moz-transform:translate3d(0,0,0);
+			-o-transform:translate3d(0,0,0)
+		}
+		
+		
+		@-webkit-keyframes cloud_one {
+			0% {left:0}
+			100% {left:-200%}
+		}
+		@-webkit-keyframes cloud_two {
+			0% {left:0}
+			100% {left:-200%}
+		}
+		@-webkit-keyframes cloud_three {
+			0% {left:0}
+			100% {left:-200%}
+		}
+		@-moz-keyframes cloud_one {
+			0% {left:0}
+			100% {left:-200%}
+		}
+		@-moz-keyframes cloud_two {
+			0% {left:0}
+			100% {left:-200%}
+		}
+		@-moz-keyframes cloud_three {
+			0% {left:0}
+			100% {left:-200%}
+		}
