@@ -14,11 +14,11 @@ background: #070B26; color: #383838;
 a { text-decoration: none;}
 
 #principal {
-position: fixed;
+position: absolute;
 display: inline-block;
 margin: auto;
 left: 0; right: 0; 
-top: 0; bottom: 0;
+top: 100%;
 width: 85%;
 height: 75%;
 min-width: 800px;
