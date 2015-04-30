@@ -27,7 +27,7 @@ max-width: 1800px;
 max-height: 1600px;
 box-sizing: border-box;
 background: rgba(20,20,20,0.8);
-border-radius: 0px;
+border-radius: 8px;
 padding: 5px;
 border: 2px #424242 solid;
 transform:scale(1.0,1.0);
@@ -54,7 +54,7 @@ opacity: 0;
 #menu {
 	position: relative;
 	top: 0;	left: 0; right: 0; height: 40px; 
-	background: #181818;
+	background: transparent;
 	color: #CDCDCD;
 	margin: -5px;
 	box-sizing: border-box;
@@ -123,6 +123,7 @@ transition: all 150ms ease;
 	position: absolute; top: 50px; left: 10px; right: 200px; bottom: 10px;
 	background: #EFEFEF; border: 1px #CDCDCD solid; overflow: auto;
    	box-sizing: border-box; padding: 10px; text-align: justify;
+   	border-radius: 8px 0 0 8px;
 }
 .target {
 	margin-bottom: 50px;
