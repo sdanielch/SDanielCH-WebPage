@@ -9,7 +9,7 @@ html, body {
 *:active { outline: none; border: none; }
 *:focus { outline:0 !important; }
 body {
-background: #070B26; color: #383838;
+background: transparent; color: #383838;
 }
 a { text-decoration: none;}
 
@@ -141,19 +141,11 @@ transition: all 150ms ease;
 			overflow:hidden !important;
 			-webkit-transform:translate3d(0,0,0);
 			-moz-transform:translate3d(0,0,0);
-			-o-transform:translate3d(0,0,0)
-			background: #070b26;
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA3MGIyNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDIyODgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top, #070b26 0%, #002288 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#070b26), color-stop(100%,#002288));
-background: -webkit-linear-gradient(top, #070b26 0%,#002288 100%);
-background: -o-linear-gradient(top, #070b26 0%,#002288 100%);
-background: -ms-linear-gradient(top, #070b26 0%,#002288 100%);
-background: linear-gradient(to bottom, #070b26 0%,#002288 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070b26', endColorstr='#002288',GradientType=0 );
+			-o-transform:translate3d(0,0,0);
+			background: #020202;
 		}
 .moon {
-			background:url("http://montanaflynn.me/lab/css-clouds/images/moon.png");
+			background:url("../img/moon.png");
 			background-position: right center;
 			position:absolute;
 			right: 0; top: 0;
@@ -165,7 +157,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070b26', end
 		
 
 		.clouds_one {
-			background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_one.png");
+			background:url("../img/cloud_one.png");
 			position:absolute;
 			background-repeat: repeat-x;
 			left:0;
@@ -181,7 +173,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070b26', end
 		}
 		
 		.clouds_two {
-			background: url("http://montanaflynn.me/lab/css-clouds/images/cloud_two.png");
+			background: url("../img/cloud_two.png");
 			position:absolute;
 			background-repeat: repeat-x;
 			left:0;
@@ -197,7 +189,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#070b26', end
 		}
 		
 		.clouds_three {
-			background:url("http://montanaflynn.me/lab/css-clouds/images/cloud_three.png");
+			background:url("../img/cloud_three.png");
 			position:absolute;
 			background-repeat: repeat-x;
 			left:0;
