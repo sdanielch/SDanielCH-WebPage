@@ -56,20 +56,22 @@ $("#tesla").on('scroll', function() {
       cursorborder: "1px solid #484848",
       cursorcolor: "#000",
       cursorborderradius: "20px 0px 0px 20px",
-      smoothscroll: false,
+      smoothscroll: true,
       background: "transparent",
-      zindex: 1
+      zindex: 1,
+      bouncescroll: true
     });
-    
+
     $( window ).resize(function() {
         $("#tesla").wait(2000).niceScroll({
       cursoropacitymin:0.5,
       cursorborder: "1px solid #484848",
       cursorcolor: "#000",
       cursorborderradius: "20px 0px 0px 20px",
-      smoothscroll: false,
+      smoothscroll: true,
       background: "transparent",
-      zindex: 1
+      zindex: 1,
+      bouncescroll: true
     });
     });
 
