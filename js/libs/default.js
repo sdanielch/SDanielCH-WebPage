@@ -22,4 +22,10 @@ $(document).ready(function () {
 		}
 	});
 
+
+     $( "#cargando" ).show( 300 );
+        $("#load-ajax").load("../html/home.html", function(){
+             setTimeout( "$( '#cargando' ).hide( 500 );",500 );
+        });
+
 });

@@ -51,3 +51,28 @@ body {
 background: transparent; color: #383838;
 }
 a { text-decoration: none;}
+
+#sidebarprincipal {
+position: fixed; margin: auto; max-width: 1800px;
+top: 0; left: 0; right: 0; height: 40px;
+    background: #484848;
+    z-index: 100;
+}
+#central {
+position: absolute; margin: auto; top: 50px; bottom: 10px;
+    left: 0; right: 0; max-width: 1100px; min-height: 600px;
+    background: #282828; height: 0;
+    z-index: 10; border: 1px #181818 solid;
+}
+#central-l1 {
+position: absolute; top: 0; left: 0; bottom: 0; width: 200px;
+    background: #282828;
+}
+#central-t1 {
+position: absolute; top: 0; left: 200px; right: 0; height: 40px;
+    background: #282828;
+}
+#central-l2 {
+position: absolute; top: 40px; left: 200px; bottom: 10px; right: 0;
+    background: #EFEFEF; border-radius: 10px 0 0 0;
+}
