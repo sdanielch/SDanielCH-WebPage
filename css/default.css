@@ -50,6 +50,23 @@ table {
 body {
 background: transparent; color: #383838;
 }
+
+body {
+  padding: 0px;
+  background:#181818 url('../img/background.jpg') no-repeat center top fixed;
+
+}
+
+@supports (background-size: cover) {
+  body {
+    background: #181818 url('../img/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
 a { text-decoration: none;}
 
 #sidebarprincipal {
@@ -61,18 +78,64 @@ top: 0; left: 0; right: 0; height: 40px;
 #central {
 position: absolute; margin: auto; top: 50px; bottom: 10px;
     left: 0; right: 0; max-width: 1100px; min-height: 600px;
-    background: #282828; height: 0;
+    background: rgba(0,0,0,0.75); height: 0;
     z-index: 10; border: 1px #181818 solid;
+    border-radius: 10px 10px 4px 4px;
 }
 #central-l1 {
 position: absolute; top: 0; left: 0; bottom: 0; width: 200px;
-    background: #282828;
+    background: transparent;
 }
+
+
+#central-l1 ul {
+    margin: 10px;
+    padding: 0;
+    width:180px;
+    list-style-type: none;
+}
+
+#central-l1 ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: #282828;
+    display:block;
+    margin-bottom: 1px;
+    font-family: 'Roboto', Arial;
+    color: #EFEFEF; font-weight: 300;
+    text-shadow: 1px 1px 4px #181818;
+}
+
+#central-l1 ul li a:visited {
+    color: #EFEFEF;
+}
+
+#central-l1 ul li a:hover, #central-l1 ul li .current {
+    color: #EFEFEF;
+    background-color: #ABABAB;
+}
+
 #central-t1 {
 position: absolute; top: 0; left: 200px; right: 0; height: 40px;
-    background: #282828;
+    background: transparent;
+}
+#cargando {
+position: absolute;top: 0; bottom: 0; right: 20px; margin: auto;
+    background: transparent; height: 22px; font-size: 22px; font-family: 'Roboto', Arial;
+    color: #EFEFEF; font-weight: 100;
+}
+#titlebar {
+position: absolute;top: 0; bottom: 0; left: 20px; margin: auto;
+    background: transparent; height: 22px; font-size: 22px; font-family: 'Roboto', Arial;
+    color: #EFEFEF; font-weight: 100;
 }
 #central-l2 {
 position: absolute; top: 40px; left: 200px; bottom: 10px; right: 0;
-    background: #EFEFEF; border-radius: 10px 0 0 0;
+    background: #282828; border-radius: 10px 0 0 0; font-family: 'Roboto', Arial; color: #CDCDCD;
+    font-weight: 300;
+}
+#load-ajax {
+position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+    padding: 10px; overflow-y: auto; box-sizing: border-box;
 }
