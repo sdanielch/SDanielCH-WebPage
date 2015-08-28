@@ -189,3 +189,48 @@ background: rgba(80,80,80,0.2);
 color: #888;
 }
 #social a:hover { color: #DFDFDF; }
+
+@media all and (max-width: 800px) {
+#sidebarprincipal {
+    display: block;
+    }
+#central-l2 {
+position: absolute; top: 40px; left: 0px; bottom: 10px; right: 0;
+    border-radius: 10px 0 0 0; font-family: 'Roboto', Arial; color: #CDCDCD;
+    font-weight: 300;   background: rgba(180,180,180,0.2);
+}
+    #central-l1 {
+position: fixed; top: 70px; left: -180px; bottom: 20px; border-radius: 0 10px 10px 0; background: #282828;
+        z-index: 100; border-right: 1px #CC1100 solid; box-shadow: 1px 1px 8px #441122;
+}
+     #central-l1:hover {
+position: fixed; top: 70px; left: 0px; bottom: 20px;
+}
+
+
+    #central {
+position: absolute;  top: 50px;
+    left: 30px; right: 10px; max-width: 1100px; min-height: 600px; bottom: auto;
+    background: rgba(0,0,0,0.75); height: 0;
+    z-index: 10; border: 1px #181818 solid;
+    border-radius: 10px 10px 4px 4px;
+}
+
+
+/* blur */
+#centralblur {
+position: absolute;  top: 50px;
+    left: 30px; right: 10px; max-width: 1100px; min-height: 600px; bottom: auto;
+    background: rgba(0,0,0,0.75); height: 0;
+    z-index: 5; border: 1px #181818 solid;
+    border-radius: 10px 10px 4px 4px;
+    overflow: hidden;
+}
+
+    #titlebar {
+position: absolute;top: 0; bottom: 0; left: -180px; margin: auto;
+    background: transparent; height: 22px; font-size: 22px; font-family: 'Roboto', Arial;
+    color: #EFEFEF; font-weight: 100;
+}
+
+}

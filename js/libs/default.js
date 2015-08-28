@@ -105,7 +105,6 @@ $(document).ready(function () {
         $("#sec5").click();
     }
 
-
 // Check if a new cache is available on page load.
 
 
