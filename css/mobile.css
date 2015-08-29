@@ -47,27 +47,10 @@ table {
 *:focus { outline:0 !important; }
 /* Luego comienzan los estilos que le darán color a la página */
 
-body {
-background: transparent; color: #383838;
+body { background:#181818 url('../img/background.jpg') no-repeat center top fixed;
+  padding: 0px; color: #383838;
 }
 
-body {
-  padding: 0px;
-  background:#181818 url('../img/background.jpg') no-repeat center top fixed;
-
-}
-
-@supports (background-size: cover) {
-  body {
-    background: #181818 url('../img/background.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-a { text-decoration: none;}
 
 #sidebarprincipal {
 position: fixed; margin: auto; max-width: 1800px;
@@ -83,46 +66,7 @@ background: linear-gradient(to bottom, #151515 0%,#1e1e1e 50%,#1b1b1b 51%,#29292
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#151515', endColorstr='#292929',GradientType=0 ); /* IE6-9 */
     z-index: 100;
 }
-#central {
-position: absolute; margin: auto; top: 50px; bottom: auto;
-    left: 0; right: 0; max-width: 1100px; min-height: 600px;
-    min-width: 800px;
-    background: rgba(0,0,0,0.75); height: 0;
-    z-index: 10; border: 1px #181818 solid;
-    border-radius: 10px 10px 4px 4px;
-}
 
-
-/* blur */
-#centralblur {
-position: absolute; margin: auto; top: 50px; bottom: auto;
-    left: 0; right: 0; max-width: 1100px; min-height: 600px;
-    background: rgba(0,0,0,0.75); height: 0;
-    z-index: 5; border: 1px #181818 solid;
-    border-radius: 10px 10px 4px 4px;
-    min-width: 800px;
-    overflow: hidden;
-}
-#centralblurimg {
-position: absolute; top: -20px; bottom: -20px;
-    left: -20px; right: -20px; border-radius: 10px 10px 4px 4px;
-}
-@supports (background-size: cover) {
-  #centralblurimg {
-    background: #181818 url('../img/background.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-      filter: blur(8px);
-        -webkit-filter: blur(8px);
-  }
-}
-
-#central-l1 {
-position: absolute; top: 0; left: 0; bottom: 0; width: 200px;
-    background: transparent;
-}
 
 
 #central-l1 ul {
@@ -159,7 +103,7 @@ position: absolute; top: 0; left: 200px; right: 0; height: 40px;
 }
 #cargando {
 position: absolute;top: 0; bottom: 0; right: 20px; margin: auto;
-    background: transparent; height: 22px; font-size: 22px; font-family: 'Roboto', Arial;
+    background: transparent; height: 22px; font-size: 10px; font-family: 'Roboto', Arial;
     color: #EFEFEF; font-weight: 100;
 }
 #titlebar {
@@ -193,3 +137,54 @@ color: #888;
 #social a:hover { color: #DFDFDF; }
 
 
+
+
+
+
+#central-l2 {
+position: absolute; top: 40px; left: 0px; bottom: 10px; right: 0;
+    border-radius: 10px 0 0 0; font-family: 'Roboto', Arial; color: #CDCDCD;
+    font-weight: 300;   background: rgba(180,180,180,0.2);
+}
+    #central-l1 {
+position: fixed; top: 70px; left: -180px;
+bottom: 20px; border-radius: 0 10px 10px 0;
+background: #282828; z-index: 100;
+border-right: 1px #CC1100 solid;
+box-shadow: 1px 1px 8px #441122;
+ -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.menumobile {
+position: fixed !important;
+    top: 70px !important;
+    left: 0px !important;
+    bottom: 20px !important;
+}
+.espejar {
+-moz-transform: scaleX(-1); /* Firefox */
+-o-transform: scaleX(-1); /* Opera */
+-webkit-transform: scaleX(-1); /* Chrome y Safari */
+transform: scaleX(-1); /* w3org */
+filter: FlipH; /* Internet Explorer */
+}
+
+    #central {
+position: absolute;  top: 50px;
+    left: 30px; right: 10px; bottom: 20px;
+    background: rgba(0,0,0,0.75);
+    z-index: 10; border: 1px #181818 solid;
+    border-radius: 10px 10px 4px 4px;
+}
+
+
+
+
+    #titlebar {
+position: absolute;top: 0; bottom: 0; left: -180px; margin: auto;
+    background: transparent; height: 22px; font-size: 18px; font-family: 'Roboto', Arial;
+    color: #EFEFEF; font-weight: 100;
+}
