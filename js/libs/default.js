@@ -46,20 +46,35 @@ console.log("Detectado dispositivo móvil dispositivo móvil");
   .done(function( script, textStatus ) {
     console.log( "Carga de jQuery Mobile completada" );
 
-$("<img src='http://demo.virtuti.info/75pf-demo/images/swipe.png' style='width: 100px; position: fixed; bottom: 50px; left: 0; z-index: 10;' id='swipee' />").appendTo("body");
+$("<img src='img/swipe.png' style='width: 100px; position: fixed; bottom: 50px; left: 0; z-index: 10;' id='swipee' />").appendTo("body");
 $("#sidebarprincipal, #central-l1, #swipee").on("swiperight",function(){
 $("#central-l1").addClass( "menumobile");
 $("#swipee").fadeOut(500).wait(550).addClass("espejar").fadeIn(500).wait(3500).fadeOut(500);
+    $("#bar").css("color", "#FFF");
 });
 $("#sidebarprincipal, #central-l1").on("swipeleft",function(){
 $("#central-l1").removeClass("menumobile");
     $("#swipee").fadeOut(500);
+    $("#bar").css("color", "#888");
 });
 $("#central-l2").on("click",function(){
     $("#central-l1").removeClass("menumobile");
+    $("#bar").css("color", "#888");
 });
 
+$("#bar").on("click", function(){
+    var tite = $("#central-l1").hasClass("menumobile");
+    if(tite == true){
+        $("#central-l1").removeClass( "menumobile");
+            $("#swipee").fadeOut(500);
+        $(this).css("color", "#888");
 
+    } else {
+$("#central-l1").addClass( "menumobile");
+$("#swipee").fadeOut(500).wait(550).addClass("espejar").fadeIn(500).wait(3500).fadeOut(500);
+        $(this).css("color", "#FFF");
+    }
+});
 
 
 

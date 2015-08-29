@@ -163,6 +163,7 @@ position: fixed !important;
     top: 70px !important;
     left: 0px !important;
     bottom: 20px !important;
+    background: rgba(0,0,0,0.85) !important;
 }
 .espejar {
 -moz-transform: scaleX(-1); /* Firefox */
@@ -180,7 +181,18 @@ position: absolute;  top: 50px;
     border-radius: 10px 10px 4px 4px;
 }
 
-
+#bar {
+	display: inline-block;
+    position: absolute;
+    top: 5px; left: 5px;
+    color: #888;
+    font-size: 32px;
+    -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
 
 
     #titlebar {

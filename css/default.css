@@ -191,5 +191,7 @@ background: rgba(80,80,80,0.2);
 color: #888;
 }
 #social a:hover { color: #DFDFDF; }
-
+#bar {
+display: none;
+}
 
