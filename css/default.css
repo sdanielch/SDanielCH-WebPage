@@ -206,4 +206,6 @@ color: #888;
 #bar {
 display: none;
 }
-
+.ui-loader {
+  display:none !important;
+}

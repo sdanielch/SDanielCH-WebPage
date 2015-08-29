@@ -41,7 +41,9 @@ console.log("Detectado dispositivo móvil dispositivo móvil");
   .attr('href', 'https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css');
    */
     /////////////////////////////////////////////////////////////
-
+jQuery(document).on("mobileinit", function() {
+    jQuery.mobile.autoInitializePage = false;
+});
     $.getScript( "https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js" )
   .done(function( script, textStatus ) {
     console.log( "Carga de jQuery Mobile completada" );
@@ -75,13 +77,6 @@ $("#swipee").fadeOut(500).wait(550).addClass("espejar").fadeIn(500).wait(3500).f
         $(this).css("color", "#FFF");
     }
 });
-
-
-
-
-
-
-
 
 
   })
