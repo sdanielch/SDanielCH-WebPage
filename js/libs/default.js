@@ -114,8 +114,8 @@ $("#swipee").fadeOut(500).wait(550).addClass("espejar").fadeIn(500).wait(3500).f
 		}
 	});
     /* Estilizamos el menu y configuramos la primera sección del menu como la predeterminada */
-    $("#central-l1 ul li a:first").css("border-radius", "5px 5px 0 0");
-    $("#central-l1 ul li a:last").css("border-radius", "0 0 5px 5px");
+   // $("#central-l1 ul li a:first").css("border-radius", "5px 5px 0 0");
+   // $("#central-l1 ul li a:last").css("border-radius", "0 0 5px 5px");
     $("#central-l1 ul li a:first").addClass("current");
     /* Configuramos el click de los menus */
     $("#central-l1 ul li a").click(function() {
