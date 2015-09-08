@@ -293,14 +293,14 @@ filter: FlipH; /* Internet Explorer */
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes myfirst1 {
-  from {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2;}
-  to {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1;}
+  from {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2; box-shadow: 0 0 20px #FFF;}
+  to {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1; box-shadow: 0 0 0 #000;}
 }
 
 /* Standard syntax */
 @keyframes myfirst1 {
-  from {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2;}
-  to {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1;}
+  from {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2; box-shadow: 0 0 20px #FFF;}
+  to {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1; box-shadow: 0 0 0 #000;}
 }
 
   .anima100v {
@@ -314,14 +314,14 @@ filter: FlipH; /* Internet Explorer */
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes myfirst1v {
-  from {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1;}
-  to {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2;}
+  from {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1; box-shadow: 0 0 0 #000;}
+  to {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2; box-shadow: 0 0 20px #FFF;}
 }
 
 /* Standard syntax */
 @keyframes myfirst1v {
-  from {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1;}
-  to {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2;}
+  from {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1; box-shadow: 0 0 0 #000;}
+  to {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2; box-shadow: 0 0 20px #FFF;}
 }
 
 
