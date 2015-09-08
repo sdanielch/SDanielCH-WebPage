@@ -86,7 +86,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#151515', end
 }
 #central {
 position: absolute; margin: auto; top: 0px; bottom: 0px;
-    left: 0; right: 0; max-width: 1800px;
+    left: 0; right: 0; max-width: 1400px;
     background: rgba(0,0,0,0.75); z-index: 10;
     border: 0px #181818 solid;
 }
