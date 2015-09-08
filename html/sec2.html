@@ -1,9 +1,12 @@
 <!doctype html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-Haciendo test de la sección 2 asdasd asd
-joderrr
-
+<div id="quiensoy">
+    Descargar curriculum (Izquierda en Español, Derecha en Inglés)
+    <br /><br />
+<a href="/docs/curriculumes.pdf" download target="_blank"><img src="/docs/CUES.png" /></a>
+<a href="/docs/curriculumen.pdf" download target="_blank"><img src="/docs/CUEN.png" /></a>
+</div>
 
 <script>
 $(document).ready(function () {
@@ -12,14 +15,27 @@ $(document).ready(function () {
 </script>
 
 <style>
+#quiensoy {
+position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+    max-width: 500px; max-height: 240px; background: rgba(18,18,18,0.75);
+    border-radius: 18px; text-align: center; padding: 20px;
+}
+#quiensoy img {
+width: 200px;
+margin: 10px;
+    border-radius: 10px;
+}
 @supports (background-size: cover) {
   #load-ajax {
-      border-radius: 10px 0 0 0;
-    background: transparent url('../img/sec2.jpg') no-repeat center center fixed;
+    background: transparent url('../img/fantasia-paisajes-cueva.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
 }
+
+
+
+
 </style>

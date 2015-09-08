@@ -170,12 +170,12 @@ position: absolute;top: 0; bottom: 0; left: 20px; margin: auto;
 #central-l2 {
 position: absolute; top: 40px; left: 200px; bottom: 10px; right: 0;
     border-radius: 0; font-family: 'Roboto', Arial; color: #282828;
-    font-weight: 300;   background: #FFF;
+    font-weight: 300;   background: #020202;
 }
 #load-ajax {
 position: absolute; top: 0; bottom: 0; left: 0; right: 0;
     padding: 10px; overflow-y: auto; box-sizing: border-box;
-    z-index: 120;
+    z-index: 120; color: #FFF; text-shadow: 0 0 1px #181818, 0 0 1px #181818, 0 0 1px #181818, 0 0 1px #181818, 0 0 1px #181818, 1px 1px 4px #484848;
 }
 #background-1 {
 position: absolute; top: 0; bottom: 0; left: 0; right: 0;
@@ -260,3 +260,70 @@ position: fixed !important;
 transform: scaleX(-1); /* w3org */
 filter: FlipH; /* Internet Explorer */
 }
+
+
+.anima500 {
+     box-sizing: border-box;
+  transform:scale(1.0,1.0);
+  -webkit-animation: myfirst 300ms; /* Chrome, Safari, Opera */
+  animation: myfirst 300ms;
+  opacity: 1.0;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+  from {transform:scale(0.5,0.5); opacity: 0.2;}
+  to {transform:scale(1.0,1.0); opacity: 1.0;}
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+  from {transform:scale(0.5,0.5); opacity: 0.2;}
+  to {transform:scale(1.0,1.0); opacity: 1.0;}
+}
+
+  .anima100 {
+     box-sizing: border-box;
+  transform:scale(1.0,1.0);
+  -webkit-animation: myfirst1 300ms; /* Chrome, Safari, Opera */
+  animation: myfirst1 300ms;
+    border-radius: 0px;
+      opacity: 1;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst1 {
+  from {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2;}
+  to {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1;}
+}
+
+/* Standard syntax */
+@keyframes myfirst1 {
+  from {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2;}
+  to {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1;}
+}
+
+
+
+
+  .anima100v {
+     box-sizing: border-box;
+  transform:scale(0.2,0.2);
+  -webkit-animation: myfirst1v 300ms; /* Chrome, Safari, Opera */
+  animation: myfirst1v 300ms;
+    border-radius: 100%;
+      opacity: 0.2;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst1v {
+  from {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1;}
+  to {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2;}
+}
+
+/* Standard syntax */
+@keyframes myfirst1v {
+  from {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1;}
+  to {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2;}
+}
+

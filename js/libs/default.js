@@ -77,6 +77,7 @@ comprueba();
 
 	console.log("Documento cargado");
     $.ajaxSetup({
+            cache: false,
         error: function (x, e) {
              $("#titlebar").text("Error "+x.status);
         if (x.status == 0) {
@@ -121,20 +122,34 @@ comprueba();
             }
         });
     /* Para no repetir la misma funcion creamos una funcion que englobe cada click llamada menuajax */
+   var myVar;
     function menuajax(id, url2) {
            $(id).click(function(){
            $("#cargando").html(cargando);
-           $( "#cargando" ).stop( true, true ).fadeIn( 300 );
-               $("#load-ajax, #titlebar").fadeOut(100);
+           $( "#cargando" ).show();
+               $("#titlebar").hide(100);
+               $("#load-ajax").addClass("anima100v");
+                   clearTimeout(myVar);
+               myVar = setTimeout(function(){
+                      $("#load-ajax").remove();
+               $("<div id=\"load-ajax\"></div>").appendTo("#central-l2");
+               $("#load-ajax").addClass("anima100").wait(300).removeClass("anima100");
            $("#load-ajax").load(url2, function(response, status, xhr){
-               $("#load-ajax, #titlebar").stop( true, true ).fadeIn(500);
+               $("#load-ajax, #titlebar").stop( true, true ).show();
             if ( status == "error" ) {
-            $("#cargando").html(cargandoERROR).delay(1000).fadeOut(500);
+            $("#cargando").wait(500).html(cargandoERROR).wait(1000).fadeOut(200);
             } else {
-           $("#cargando").html(cargandoOK).delay(1000).fadeOut(500);
+           $("#cargando").wait(500).html(cargandoOK).wait(1000).fadeOut(200);
             }
            });
+                   }, 300);
+
            });
+
+
+
+
+
     }
     menuajax("#sec1", "../html/home.html"); // Sección 1 -> Home
     menuajax("#sec2", "../html/sec2.html"); // Sección 2 -> Curriculum
