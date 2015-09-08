@@ -60,10 +60,25 @@ comprueba();
 
 
 
+ $("<span id=\"titlebar\"></span>").appendTo("#central-t1");
+
+    $("<span id=\"cargando\"></span>").appendTo("#central-t1");
+
+
+
+
+
+
+
+
+
+
+
+
 	console.log("Documento cargado");
     $.ajaxSetup({
         error: function (x, e) {
-             $("#titlebar").text("Error al cargar");
+             $("#titlebar").text("Error "+x.status);
         if (x.status == 0) {
         $("#load-ajax").html('Parece que usted no tiene conexión con el servidor, intentelo de nuevo más tarde.');}
 
