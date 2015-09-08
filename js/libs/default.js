@@ -12,7 +12,14 @@ function comprueba(){
             $("#swipee").fadeOut(500);
         $(this).css("color", "#888");
         $("#swipee").remove();
+            $('#menuss').perfectScrollbar('update');
+            $('#load-ajax').perfectScrollbar('update');
+
     }
+     $('#menuss').perfectScrollbar();
+     $('#load-ajax').perfectScrollbar();
+
+
 if ($( document ).width() <= 800) {
 
     if($("#swipee").length) { } else { $("<img src='img/swipe.png' style='width: 100px; position: fixed; bottom: 50px; left: 0; z-index: 10;' id='swipee' />").appendTo("body"); }
@@ -136,10 +143,15 @@ comprueba();
                $("#load-ajax").addClass("anima100").wait(300).removeClass("anima100");
            $("#load-ajax").load(url2, function(response, status, xhr){
                $("#load-ajax, #titlebar").stop( true, true ).show();
+               $('#load-ajax').perfectScrollbar('update');
             if ( status == "error" ) {
             $("#cargando").wait(500).html(cargandoERROR).wait(1000).fadeOut(200);
+                $('#load-ajax').perfectScrollbar('update');
             } else {
            $("#cargando").wait(500).html(cargandoOK).wait(1000).fadeOut(200);
+
+            $('#load-ajax').perfectScrollbar('update');
+
             }
            });
                    }, 300);

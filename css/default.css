@@ -127,7 +127,7 @@ position: absolute; top: 0; left: 0; bottom: 0; width: 200px;
 #central-l1 ul {
     margin: 10px;
     padding: 0;
-    width:180px;
+    width:calc(100% - 20px);
     list-style-type: none;
     margin-top: 40px;
 }
@@ -303,9 +303,6 @@ filter: FlipH; /* Internet Explorer */
   to {transform:scale(1.0,1.0); border-radius: 0px; opacity: 1;}
 }
 
-
-
-
   .anima100v {
      box-sizing: border-box;
   transform:scale(0.2,0.2);
@@ -327,3 +324,9 @@ filter: FlipH; /* Internet Explorer */
   to {transform:scale(0.2,0.2); border-radius: 100%; opacity: 0.2;}
 }
 
+
+#menuss {
+position: absolute; top: 0; left: 0; right: 0; bottom: 85px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
