@@ -179,9 +179,24 @@ position: absolute; top: 0; bottom: 0; left: 0; right: 0;
 }
 #background-1 {
 position: absolute; top: 0; bottom: 0; left: 0; right: 0;
-    padding: 0px; overflow-y: auto; box-sizing: border-box;
-    z-index: 110;
+    padding: 0px; overflow: hidden; box-sizing: border-box;
+    z-index: 110;  background: transparent url('http://37.media.tumblr.com/d30d4de76c0c0986843891e0c4660aa2/tumblr_n7jbn4czsj1tcvo52o1_500.gif') no-repeat center center fixed;
+
 }
+
+
+@supports (background-size: cover) {
+  #background-1 {
+    background: transparent url('http://37.media.tumblr.com/d30d4de76c0c0986843891e0c4660aa2/tumblr_n7jbn4czsj1tcvo52o1_500.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+
+
 #social {
 background: rgba(80,80,80,0.2);
     border-radius: 10px;
