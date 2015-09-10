@@ -11,6 +11,7 @@ $(document).ready(function () {
 </script>
 
 <style>
+
 @supports (background-size: cover) {
   #load-ajax {
     background: transparent url('../img/wallpaper_2270.jpg') no-repeat center center fixed;
@@ -19,10 +20,15 @@ $(document).ready(function () {
     -o-background-size: cover;
     background-size: cover;
   }
+
+    #back1 {
+    background: transparent url('../img/wallpaper_2270.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+          filter: blur(8px);
+        -webkit-filter: blur(8px);
+  }
 }
-
-
-
-
-
 </style>
