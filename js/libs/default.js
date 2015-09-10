@@ -1,11 +1,5 @@
 $(document).ready(function () {
 
-// Añadimos el Favicon
-        $('<link>')
-  .appendTo('head')
-  .attr({type : 'image/x-icon', rel : 'rel'})
-  .attr('href', 'data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAEMAAAB0AAAAbQAAABUAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwQAAAP4AAAD9AAAA/gAAAP4AAAD9AAAA/wAAACUAAAAAAAAAMAAAAEMAAAAAAAAAAAAAAAAAAAAAAAAApwAAAP4AAAD/AAAA0gAAAHMAAACHAAAA/wAAAP4AAAD7AAAAAAAAAAEAAAD3AAAAAAAAAAAAAAAAAAAAAAAAAP4AAAD+AAAAAAAAAAEAAAAAAAAAAAAAAAEAAAC3AAAA/gAAAKUAAAAAAAAAvAAAAAAAAAAAAAAAAAAAAAAAAAD+AAAA/gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAJQAAAP0AAADjAAAAAQAAAP4AAAAAAAAAAAAAAAAAAAAAAAAAowAAAP0AAACSAAAAAAAAAAUAAAAAAAAABAAAAPEAAAD+AAAArgAAAP8AAAC9AAAAAQAAAAAAAAAAAAAAAAAAAAAAAACbAAAA/wAAAPkAAAD/AAAANgAAAP8AAAD/AAAA/AAAAFwAAACcAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAIgAAAPoAAAD+AAAA/gAAAPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD+AAAA/gAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAACwAAAD9AAAA/wAAAPsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfAAAA+wAAAP8AAAD+AAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8gAAANIAAAD+AAAA/QAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPsAAACmAAAAAAAAAKEAAAAAAAAA0QAAALcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAADSAAAA/gAAAP8AAAD/AAAA/QAAAP4AAAB9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMgAAAD+AAAA/AAAAP0AAADmAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAOA/AADCGwAAz4sAAM/LAADHgwAA4RcAAP4fAAD8PwAA/H8AAPx/AAD4fwAA+U8AAPgfAAD8HwAA//8AAA==');
-
 function comprueba(){
     if ($( document ).width() >= 801) {
         $("#central-l1").removeClass( "menumobile");
@@ -23,7 +17,7 @@ function comprueba(){
 if ($( document ).width() <= 800) {
 
     if($("#swipee").length) { } else { $("<img src='img/swipe.png' style='width: 100px; position: fixed; bottom: 50px; left: 0; z-index: 10;' id='swipee' />").appendTo("body"); }
-$("#central-t1, #central-l1, #swipee").on("swiperight",function(){
+$("#central-t1, #central-l1, #swipee, .ps-scrollbar-x-rail, .ps-scrollbar-x, .ps-scrollbar-y-rail, .ps-scrollbar-y, .ps-container, .ps-active-y, .ps-in-scrolling, .ps-y, #menuss").on("swiperight",function(){
 $("#central-l1").addClass( "menumobile");
 $("#swipee").fadeOut(500).wait(550).addClass("espejar").fadeIn(500).wait(3500).fadeOut(500);
     $("#bar2").css("color", "#FFF");
@@ -198,6 +192,24 @@ comprueba();
 
 // Check if a new cache is available on page load.
 
+var mousewheelevt = (/Firefox/i.test(navigator.userAgent)) ? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
+$(document).bind(mousewheelevt, function(e){
 
+    var evt = window.event || e //equalize event object
+    evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible
+    var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
+
+    if(delta > 0) {
+        //scroll up
+        $("#central-l1").removeClass("nomobile");
+        $("#load-ajax").removeClass("ajax2");
+
+    }
+    else{
+        //scroll down
+        $("#central-l1").addClass("nomobile");
+        $("#load-ajax").addClass("ajax2");
+    }
+});
 
 });
