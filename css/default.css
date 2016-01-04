@@ -64,9 +64,25 @@ a { text-decoration: none;}
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+     filter: blur(16px) grayscale(100%);
+        -webkit-filter: blur(16px) grayscale(100%);
+  }
+  .main2 {
+      position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px;
+    background: #181818 url('../img/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
      filter: blur(16px);
         -webkit-filter: blur(16px);
   }
+    .main1 {
+              position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden;
+    }
+    .main3 {
+              position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: auto;
+    }
 }
 .background2 {
 	    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
